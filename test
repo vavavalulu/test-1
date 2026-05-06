@@ -1,4 +1,4 @@
--- [[ STORM HUB V2.2 - OFFICIAL ]] --
+-- [[ STORM HUB V2.2 - OFFICIAL BLUE EDITION ]] --
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -6,7 +6,7 @@ local Window = OrionLib:MakeWindow({
     Name = "STORM HUB | ULTIMATE ⚡", 
     HidePremium = false, 
     SaveConfig = true, 
-    ConfigFolder = "StormHubConfig",
+    ConfigFolder = "StormHubBlue",
     IntroText = "STORM HUB V2.2"
 })
 
@@ -18,7 +18,7 @@ local MovementTab = Window:MakeTab({
 })
 
 MovementTab:AddToggle({
-	Name = "🍒 Athletic Speed (T)",
+	Name = "⚡ Athletic Speed (T)",
 	Default = false,
 	Callback = function(Value)
 		-- Seu código de velocidade aqui
@@ -26,7 +26,7 @@ MovementTab:AddToggle({
 })
 
 MovementTab:AddToggle({
-	Name = "🍒 Enable Super Jump",
+	Name = "⚡ Enable Super Jump",
 	Default = false,
 	Callback = function(Value)
 		-- Seu código de pulo aqui
@@ -38,7 +38,7 @@ MovementTab:AddSlider({
 	Min = 10,
 	Max = 100,
 	Default = 25,
-	Color = Color3.fromRGB(255, 105, 180),
+	Color = Color3.fromRGB(0, 150, 255), -- Azul Storm
 	Increment = 1,
 	ValueName = "Force",
 	Callback = function(Value)
@@ -54,7 +54,7 @@ local VisualTab = Window:MakeTab({
 })
 
 VisualTab:AddToggle({
-	Name = "🍒 Enable ESP (Freefall)",
+	Name = "⚡ Enable ESP (Freefall)",
 	Default = false,
 	Callback = function(Value)
 		-- Seu código de ESP aqui
@@ -63,7 +63,7 @@ VisualTab:AddToggle({
 
 VisualTab:AddColorpicker({
 	Name = "ESP Color",
-	Default = Color3.fromRGB(255, 0, 0),
+	Default = Color3.fromRGB(0, 100, 255),
 	Callback = function(Value)
 		-- Cor do ESP
 	end	  
@@ -84,7 +84,7 @@ ExtrasTab:AddButton({
 })
 
 ExtrasTab:AddToggle({
-	Name = "🍒 FPS Unlocker (999+)",
+	Name = "⚡ FPS Unlocker (999+)",
 	Default = true,
 	Callback = function(Value)
 		if Value then
@@ -105,7 +105,7 @@ ExtrasTab:AddButton({
 -- Mensagem de carregamento
 OrionLib:MakeNotification({
 	Name = "Storm Hub",
-	Content = "Script carregado com sucesso!",
+	Content = "Sistema carregado em modo azul! ⚡",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
