@@ -1,0 +1,113 @@
+-- [[ STORM HUB V2.2 - OFFICIAL ]] --
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({
+    Name = "STORM HUB | ULTIMATE ⚡", 
+    HidePremium = false, 
+    SaveConfig = true, 
+    ConfigFolder = "StormHubConfig",
+    IntroText = "STORM HUB V2.2"
+})
+
+-- [[ ABA MOVIMENTAÇÃO ]] --
+local MovementTab = Window:MakeTab({
+	Name = "Movement",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+MovementTab:AddToggle({
+	Name = "🍒 Athletic Speed (T)",
+	Default = false,
+	Callback = function(Value)
+		-- Seu código de velocidade aqui
+	end    
+})
+
+MovementTab:AddToggle({
+	Name = "🍒 Enable Super Jump",
+	Default = false,
+	Callback = function(Value)
+		-- Seu código de pulo aqui
+	end    
+})
+
+MovementTab:AddSlider({
+	Name = "Jump Force",
+	Min = 10,
+	Max = 100,
+	Default = 25,
+	Color = Color3.fromRGB(255, 105, 180),
+	Increment = 1,
+	ValueName = "Force",
+	Callback = function(Value)
+		-- Ajuste da força
+	end    
+})
+
+-- [[ ABA VISUAL ]] --
+local VisualTab = Window:MakeTab({
+	Name = "Visual",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+VisualTab:AddToggle({
+	Name = "🍒 Enable ESP (Freefall)",
+	Default = false,
+	Callback = function(Value)
+		-- Seu código de ESP aqui
+	end    
+})
+
+VisualTab:AddColorpicker({
+	Name = "ESP Color",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+		-- Cor do ESP
+	end	  
+})
+
+-- [[ ABA EXTRAS ]] --
+local ExtrasTab = Window:MakeTab({
+	Name = "Extras",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+ExtrasTab:AddButton({
+	Name = "✨ Unlock Emotes ✨",
+	Callback = function()
+		-- Código de emotes
+	end    
+})
+
+ExtrasTab:AddToggle({
+	Name = "🍒 FPS Unlocker (999+)",
+	Default = true,
+	Callback = function(Value)
+		if Value then
+			setfpscap(999)
+		else
+			setfpscap(60)
+		end
+	end    
+})
+
+ExtrasTab:AddButton({
+	Name = "💻 Low Graphics",
+	Callback = function()
+		-- Código de otimização
+	end    
+})
+
+-- Mensagem de carregamento
+OrionLib:MakeNotification({
+	Name = "Storm Hub",
+	Content = "Script carregado com sucesso!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+OrionLib:Init()
